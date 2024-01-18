@@ -1,40 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Certainly! Here's a basic example of a README.md file for the provided code:
+
+```markdown
+# Flight Search App
+
+This React application allows users to search for flights using the Amadeus API. The application consists of two main components: `FlightSearch` and `api.js`. The `FlightSearch` component provides a user interface for entering search parameters and displays the flight search results. The `api.js` file contains the logic for interacting with the Amadeus API to perform flight searches.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository to your local machine:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd <repository-directory>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. Set up Amadeus API credentials:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   - Obtain your Amadeus API key and secret from the Amadeus developer portal.
+   - Create a `config.js` file in the project root and export your API key and secret:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```javascript
+   // config.js
+   export const amadeusApiKey = 'your-api-key';
+   export const amadeusApiSecret = 'your-api-secret';
+   ```
 
-## Learn More
+4. Run the application:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Visit [http://localhost:3000](http://localhost:3000) in your browser to use the Flight Search App.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Components
 
-## Deploy on Vercel
+### `FlightSearch` (flight-search.js)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Provides a form for users to enter flight search parameters.
+- Handles user input and triggers a flight search using the `searchFlights` function from `api.js`.
+- Displays flight search results in a table.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### `api.js`
+
+- Handles communication with the Amadeus API.
+- Obtains an access token using client credentials and updates the axios instance with the token.
+- Defines the `searchFlights` function to perform flight searches and format the data for the frontend.
+
+## Notes
+
+- The application uses React and Axios for making API requests.
+- Flight search results are displayed in a table format.
+- Error handling is implemented for API requests to handle potential issues.
+
+Feel free to customize the application and add additional features as needed.
+
+```
+
+Adjust the content as necessary based on your project structure and additional information you may want to include.
