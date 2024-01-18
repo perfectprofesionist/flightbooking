@@ -1,6 +1,6 @@
 Certainly! Here's a basic example of a README.md file for the provided code:
 
-```markdown
+
 # Flight Search App
 
 This React application allows users to search for flights using the Amadeus API. The application consists of two main components: `FlightSearch` and `api.js`. The `FlightSearch` component provides a user interface for entering search parameters and displays the flight search results. The `api.js` file contains the logic for interacting with the Amadeus API to perform flight searches.
