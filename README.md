@@ -58,8 +58,3 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser to use the 
 - Flight search results are displayed in a table format.
 - Error handling is implemented for API requests to handle potential issues.
 
-Feel free to customize the application and add additional features as needed.
-
-```
-
-Adjust the content as necessary based on your project structure and additional information you may want to include.
